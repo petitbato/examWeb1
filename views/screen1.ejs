@@ -1,0 +1,18 @@
+<script>
+  var successMessage = document.getElementById('successMessage');
+</script>
+<h1>Test yourself</h1>
+<p>How do you translate <%= word.word %></p>
+<form action="/correct" method="POST">
+  <label>Your answer :</label>
+  <input name="input" />
+  <input type="submit" />
+  <% if (message) { %>
+    <p id="successMessage" class="success"><%= message %></p>
+  <% } %>
+</form>
+
+
+<form formmethod="get" action="/manager">
+<button type="submit">Word manager</button>
+</form>
